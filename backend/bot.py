@@ -117,7 +117,6 @@ async def run_bot(
         params=TransportParams(
             audio_in_enabled=True,
             audio_out_enabled=True,
-            audio_out_sample_rate=48000,  # Explicit sample rate for better resampling
             vad_analyzer=SileroVADAnalyzer(params=VADParams(stop_secs=0.3)),
         ),
     )
