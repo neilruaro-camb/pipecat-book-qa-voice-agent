@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-900 text-white;
+}
+
+/* Custom scrollbar for chat */
+.chat-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+  @apply bg-gray-800 rounded;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 rounded;
+}
+
+.chat-container::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
+
+/* Pulse animation for active status */
+@keyframes status-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+.status-active {
+  animation: status-pulse 1.5s ease-in-out infinite;
+}
+
+/* Audio visualizer bars */
+@keyframes audio-bar {
+  0%, 100% {
+    height: 4px;
+  }
+  50% {
+    height: 20px;
+  }
+}
+
+.audio-bar {
+  animation: audio-bar 0.5s ease-in-out infinite;
+}
+
+.audio-bar:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.audio-bar:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.audio-bar:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.audio-bar:nth-child(5) {
+  animation-delay: 0.4s;
+}
