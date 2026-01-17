@@ -58,7 +58,6 @@ class WebSearcher:
                 query,
                 num_results=num_results,
                 text={"max_characters": 500},
-                use_autoprompt=True,
             )
 
             results = []
